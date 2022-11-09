@@ -29,7 +29,7 @@ async def start_message(bot, message):
         )
        
                                               
-@Client.on_message(filters.command(["id", "info"], ["/", "."]))
+@Client.on_message(filters.command(["id", "info"]))
 async def media_info(bot, m): 
     FSub = await ForceSub(bot, m)
     if FSub == 400:
@@ -52,15 +52,16 @@ async def media_info(bot, m):
           if md.text:
               await m.reply_text("**hey man please reply with ( photo, video, sticker, documents, etc...) Only media **")  
           else:
-              print("[404] Error..🤖]")                                                                                      
+              await m.reply_text("[404] Error..🤖")                                                                                      
        except Exception as e:
           print(e)
+          await m.reply_text(f"[404] Error {e}")
                                         
     if not md:
         buttons = [[
             InlineKeyboardButton("✨️ Support", url="https://t.me/BETA_SUPPORT"),
             InlineKeyboardButton("📢 Updates", url="https://t.me/Beta_BoTZ")
-        ],[            
+        ]]       
         await m.reply("please wait....")
         await asyncio.sleep(3)
         if ff.photo:
