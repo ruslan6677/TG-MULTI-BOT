@@ -5,7 +5,7 @@ from pyrogram.types import *
 from helper.add_new import add_user
 from variables import PICS, ADMIN
 from plugins.utils.http import get
-form plugins import txt
+from plugins import txt
 
 @Client.on_message(filters.private & filters.command("start"))
 async def start_message(bot, message):
