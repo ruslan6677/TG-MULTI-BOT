@@ -1,4 +1,4 @@
-git+https://github.com/MrMKN/pyrogram
+git+https://github.com/jeolpaul/pyrogram@inline-m      
 TgCrypto
 motor
 dnspython
