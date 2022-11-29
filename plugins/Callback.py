@@ -42,8 +42,7 @@ async def callback(client: Client, query: CallbackQuery):
             InlineKeyboardButton('ʟᴏɢᴏ ᴍᴀᴋᴇʀ', callback_data='logomake'),            
             InlineKeyboardButton('ᴛᴇʟᴇɢʀᴀᴩʜ', callback_data='tgraph')
             ],[
-            InlineKeyboardButton('ᴛᴇxᴛ ᴛᴏ ᴠᴏɪᴄᴇ', callback_data='tts'),
-            InlineKeyboardButton('yᴏᴜᴛᴜʙᴇ ᴅʟ', callback_data='ytdl')
+            InlineKeyboardButton('ᴛᴇxᴛ ᴛᴏ ᴠᴏɪᴄᴇ', callback_data='tts')
             ],[
             InlineKeyboardButton('ᴩʜᴏᴛᴏ ᴛᴏᴏʟ', callback_data='phediter'),
             InlineKeyboardButton('ᴩᴀꜱᴛᴇ ᴄᴏᴅᴇ', callback_data='paster')
@@ -107,18 +106,7 @@ async def callback(client: Client, query: CallbackQuery):
            text=tg.TTS,
            reply_markup=InlineKeyboardMarkup(buttons),
            disable_web_page_preview = True,
-           parse_mode='html'      
-       )   
-    elif query.data == "ytdl":
-       buttons = [[
-           InlineKeyboardButton("⏮️ ʙᴀᴄᴋ", callback_data="help"),
-           InlineKeyboardButton("🔒 ᴄʟᴏꜱᴇ", callback_data="close")
-       ]]               
-       await query.message.edit(
-           text=tg.YTDL,
-           reply_markup=InlineKeyboardMarkup(buttons),
-           disable_web_page_preview = True,
-           parse_mode='html'      
+           parse_mode='html'           
        )    
     elif query.data == "phediter":
        buttons = [[
