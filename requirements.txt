@@ -8,7 +8,6 @@ dnspython
 telegraph
 python-dotenv
 requests
-Heroku3
 motor
 aiofiles
 pykeyboard
@@ -29,11 +28,7 @@ wget
 wheel
 asyncio
 Pillow
-yt-dlp
-youtube_search_python
-youtube_search
 ytthumb
-youtube-dl
 gTTS
 googletrans==3.1.0a0
 gTT
