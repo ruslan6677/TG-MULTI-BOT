@@ -4,6 +4,7 @@ RUN apt install git -y
 COPY requirements.txt /requirements.txt
 RUN cd /
 RUN pip3 install -U -r requirements.txt
+RUN pip install --upgrade pip
 WORKDIR /app
 
 COPY . .
