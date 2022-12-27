@@ -1,10 +1,9 @@
-FROM python:3.8-slim-buster
+FROM nikolaik/python-nodejs:python3.10-nodejs17
 RUN apt update && apt upgrade -y
-RUN apt install git -y
-COPY requirements.txt /requirements.txt
-RUN cd /
-RUN pip3 install -U pip && pip3 install -U -r requirements.txt
+RUN apt install ffmpeg -y
+COPY . /app
 WORKDIR /app
-
-COPY . .
+RUN chmod 777 /app
+RUN pip3 install --upgrade pip
+RUN pip3 install --no-cache-dir -U -r requirements.txt
 CMD ["python3", "loader.py"]
