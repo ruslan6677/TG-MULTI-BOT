@@ -1,5 +1,5 @@
                     
-pyrogram
+pyrogram==1.4.9
 TgCrypto
 pykeyboard
 asyncio
