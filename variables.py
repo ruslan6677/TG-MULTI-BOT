@@ -14,7 +14,7 @@ PICS = os.environ.get("PICS", "https://telegra.ph/file/34fd203eb89fd747ffb57.jpg
 
 ADMIN = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '2124305832').split()]
 
-DB_URL = os.environ.get("DB_URL", "~mongodb+srv://music:music@cluster0.sh6h4.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`")
+DB_URL = os.environ.get("DB_URL", "mongodb://music:music@cluster0.sh6h4.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`")
 
 DB_NAME = os.environ.get("DB_NAME", "tg-multi-bot")
 
