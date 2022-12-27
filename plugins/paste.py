@@ -13,7 +13,7 @@ pattern = re.compile(r"^text/|json$|yaml$|xml$|toml$|x-sh$|x-shellscript$")
 
 
 
-@Client.on_message(filters.command("paste")
+@Client.on_message(filters.command("paste"))
 @capture_err
 async def paste_func(_, message: Message):
     if not message.reply_to_message:
