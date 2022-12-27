@@ -16,7 +16,7 @@ ADMIN = [int(admin) if id_pattern.search(admin) else admin for admin in environ.
 
 DB_URL = os.environ.get("DB_URL", "mongodb://music:music@cluster0.sh6h4.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 
-DB_NAME = os.environ.get("DB_NAME", "Cluster0")
+DB_NAME = os.environ.get("DB_NAME", "music")
 
 RemoveBG_API = os.environ.get("RemoveBG_API", "")
 
