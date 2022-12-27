@@ -20,7 +20,7 @@ DB_NAME = os.environ.get("DB_NAME", "tg-multi-bot")
 
 RemoveBG_API = os.environ.get("RemoveBG_API", "")
 
-FORCE_SUB = os.environ.get("FORCE_SUB", None)           
+FORCE_SUB = os.environ.get("FORCE_SUB", TheBorzMaf)           
 
 HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", "")
  
